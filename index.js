@@ -1,6 +1,17 @@
-import { random } from "./utils/random.js";
+function random(max,min){
+    max = +max;
+    min = +min
 
-var s = 10000000000000;
+    if(isNaN(max) || isNaN(min)){
+        alert(msg);
+    }else{
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+    }
+}
+
+var s = 10000000;
 
 var cs1 = 0;
 
