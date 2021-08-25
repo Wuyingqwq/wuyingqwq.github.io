@@ -1,17 +1,6 @@
-function random(max,min){
-    max = +max;
-    min = +min
+import { random } from "./utils/random.js";
 
-    if(isNaN(max) || isNaN(min)){
-        alert(msg);
-    }else{
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
-    }
-}
-
-var s = 10000000;
+var s = 100000000000000;
 
 var cs1 = 0;
 
@@ -116,7 +105,7 @@ for(var i = 1;i <= s;i++){
         console.log("==========================================")
         console.log("出现1的概率为：" + bf1 + "%" + "，出现2的概率为：" + bf2 + "%" + "，出现3的概率为：" + bf3 + "%" + "，出现4的概率为：" + bf4 + "%" + "，出现5的概率为：" + bf5 + "%" + "，出现6的概率为：" + bf6 + "%" + "，出现7的概率为：" + bf7 + "%" + "，出现8的概率为：" + bf8 + "%" + "，出现9的概率为：" + bf9 + "%" + "，出现10的概率为：" + bf10 + "%" + "。")
     }else{
-        
+        alert("输出结果失败！！！");
     }
     
 }
