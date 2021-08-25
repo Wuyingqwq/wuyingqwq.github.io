@@ -1,6 +1,6 @@
 import { random } from "./utils/random.js";
 
-var s = 100000000000000;
+var s = 100;
 
 var cs1 = 0;
 
