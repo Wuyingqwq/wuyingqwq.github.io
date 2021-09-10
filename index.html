@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>	
+	<!--用于wMath.js-->
+	<script src="js/wMath.js"></script>
+	<!--用于reload.js-->
+	<script src="js/reload.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css"/> <!--引用CSS-->
+</head>
+<body>
+	
+	<div id="">
+		<a href="html/math.html">
+			<input type="button" name="" id="but1" value="数学"/><!--点击此按钮后会执行math.js中的start1函数-->
+		</a>
+		
+	</div>
+
+	<div>
+		<input type="button" id="but1" value="获取当前时间" onclick="alert(wMath.getThisTime())"> <!--点击此按钮后会执行getTime.js中的getTime函数-->
+	</div>
+	
+	<div id="">
+		<a href="html/ChangeLog.html">
+			<input type="button" name="" id="but1" value="更新日志" /> <!--当点击此按钮后会被定向至ChangeLog.html-->
+		</a>
+	</div>
+	
+	<div id="">
+		<a href="html/ReadmeZh.html">
+			<input type="button" name="" id="but1" value="Readme" /> <!--当点击此按钮会定向至ReadmeZh.html-->
+		</a>
+	</div>
+
+</body>
+</html>
