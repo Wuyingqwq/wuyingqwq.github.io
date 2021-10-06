@@ -1,6 +1,6 @@
-# Update at 100521!!!
-# Version: 1.7.
+# Update at 100621.
+# Version: 1.7.1.
 # Changelogs:
-# + New ui.
 # / Correct the wrong wording of certain words.
-# + Click the Get Current Time button to refresh the webpage.
+# -Separate change log module.
+# Made by Wuying.
