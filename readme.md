@@ -1,6 +1,5 @@
-# Update at 100621.
-# Version: 1.7.1.
+# Update at 103021.
+# Version: 1.9.
 # Changelogs:
-# / Correct the wrong wording of certain words.
-# -Separate change log module.
+# / Result output method.
 # Made by Wuying.
