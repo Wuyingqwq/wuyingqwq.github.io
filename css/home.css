@@ -1,5 +1,9 @@
 #homesh1 {
     color: red;
     position:absolute;
-    top: 60px;
+    top: 190px;
   }
+
+#map {
+  color: red;
+} 

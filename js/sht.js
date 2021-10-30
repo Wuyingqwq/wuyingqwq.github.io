@@ -3,7 +3,6 @@ function onMath(){
     document.getElementById('getThisTime').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('changelogs').style.display = 'none';
-    document.getElementById('downloadCode').style.display = 'none';
 }
 
 function onGetThisTime(){
@@ -11,21 +10,11 @@ function onGetThisTime(){
     document.getElementById('math').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('changelogs').style.display = 'none';
-    document.getElementById('downloadCode').style.display = 'none';
 }
 
-function changelogs(){
+function onChangelogs(){
     document.getElementById('changelogs').style.display = 'block';
     document.getElementById('math').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('getThisTime').style.display = 'none';
-    document.getElementById('downloadCode').style.display = 'none';
-}
-
-function downloadCode(){
-    document.getElementById('downloadCode').style.display = 'block';
-    document.getElementById('math').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('getThisTime').style.display = 'none';
-    document.getElementById('changelogs').style.display = 'none';
 }

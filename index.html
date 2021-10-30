@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>无影的网站</title>	
+    <title>无影的软件</title>	
 	<!--用于wMath.js-->
-	<script src="js/wMath.js"></script> <!--引用JS-->
-	<script src="js/sht.js"></script>	<!--引用JS-->
-	<script src="js/math.js"></script>
+	<script src="http://raw.githack.com/Wuyingqwq/wMath/main/wMath/wMath.js"></script> <!--引用JS-->
+
+	<script src="js/math.js"></script> <!--引用JS-->
 	
 	<link rel="stylesheet" type="text/css" href="css/allButtons.css"/> <!--引用CSS-->
 	<link rel="stylesheet" href="css/background.css"> <!--引用CSS-->
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="css/home.css"> <!--引用CSS-->
 	<link rel="stylesheet" href="css/menu.css"> <!--引用CSS-->
 	<link rel="stylesheet" href="css/texts.css"> <!--引用CSS-->
-	
+	<script src="js/h2.js"></script>
 </head>
 <body id="body">
 
@@ -39,31 +39,36 @@
 
 
 
-	<!--变更日志按钮-->
-
-	<div>
-		<input type="button" id="changelogsbutton" value="变更日志" onclick="changelogs()">
-	</div>
-
-
-
-
-
-
-	<!--下载及Github按钮-->
-
-	<div>
-		<input type="button" id="downloadCodeButton" value="下载及Github" onclick="downloadCode()">
-	</div>
-
-
-
 
 
 	<!--主页区-->
 
 	<div id="home">
-		<h1 id="homesh1">欢迎来到无影的网站，请通过顶部导航栏选择对应模块！</h1>
+		<h1 id="homesh1">欢迎来到无影的软件，请通过右上角导航栏选择对应模块！</h1>
+		<div id="changelogs">
+			<div id="">
+				<h1>版本：1.9.</h1>
+			</div>
+			
+			<div id="">
+				<h1>变更日志：</h1>
+			</div>
+	
+			<div>
+				<h1>/ 结果输出方式.</h1>
+			</div>
+	
+			<div>
+				<h1></h1>
+			</div>
+
+			<h1 id="map">
+				<a id="map" href="./html/index2.html">
+					地图（点击前往）
+				</a>
+			</h1>
+		</div>
+			
 	</div>
 
 
@@ -79,50 +84,8 @@
 	</div>
 
 
-	
 
 
-	<!--变更日志区-->
-
-	<div id="changelogs">
-		<div id="">
-			<h1>版本：1.7。</h1>
-		</div>
-
-		<div>
-			<h1>/ 修改某些词语用字错误。</h1>
-		</div>
-
-		<div>
-			<h1>+ 点击获取当前时间按钮后会刷新网页。</h1>
-		</div>
-	</div>
-
-
-
-
-	<!--下载及Github区-->
-
-	<div id="downloadCode">
-		<div>
-			<h1>手机版APK下载（密码：Wuying）</h1>
-
-			<a href="https://qwqwuying.lanzoui.com/b01iktu4d">
-				<input type="button" id="but1" value="点此下载">
-			</a>
-		</div>
-
-		<div>
-			<h1>Github</h1>
-			<a href="https://github.com/Wuyingqwq/Math-WEB-">
-				<input type="button" id="but1" value="Github(网页)">
-			</a>
-
-			<a href="https://github.com/Wuyingqwq/Math-Phone-">
-				<input type="button" id="but1" value="Github(手机)">
-			</a>
-		</div>
-	</div>
 
 
 
@@ -132,11 +95,15 @@
 	<div id="math">
 		
 		<div id="">
-			<input type="button" name="" id="but1" value="圆周率" onclick="alert(Math.PI);" /> <!--当点击此按钮后会输出圆周率（弹窗式）-->
+			<input type="button" name="" id="but1" value="圆周率" onclick="document.getElementById('h2').innerHTML = Math.PI;" /> <!--当点击此按钮后会输出圆周率（弹窗式）-->
+			</div>
+
+			<div>
+				<h1 id="h2"></h1>
 			</div>
 		
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -154,9 +121,13 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始计算" onclick="start1()"> <!--点击此按钮后会执行math.js中的start1函数-->
 			</div>
+
+			<div>
+				<h2 id="h21"></h2>
+			</div>
 		
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -174,9 +145,13 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始计算" onclick="start2()" /> <!--当点击此按钮后会执行math.js中的start2函数-->
 			</div>
+
+			<div>
+				<h2 id="h22"></h2>
+			</div>
 		
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -196,9 +171,13 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始判断" onclick="start3()"/> <!--当点击此按钮后会执行math.js中的start3函数-->
 			</div>
+
+			<div>
+				<h2 id="h23"></h2>
+			</div>
 		
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -217,9 +196,14 @@
 		
 			<div id="">
 				<input type="button" name="" id="but1" value="开始判断" onclick="start4()"/> <!--当点击此按钮后会执行math.js中的start4函数-->
-			
+			</div>
+
+			<div>
+				<h2 id="h24"></h2>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -235,8 +219,14 @@
 				<input type="button" name="" id="but1" value="开始计算"  onclick="start5()"/> <!--当点击此按钮后会执行math.js中的start5函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h25"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -251,8 +241,14 @@
 				<input type="button" id="but1" value="开始计算" onclick="start15()"> <!--当点击此按钮后会执行math.js中的start15函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h26"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -266,9 +262,15 @@
 			<div>
 				<input type="button" id="but1" value="开始计算" onclick="start16()">  <!--当点击此按钮后会执行math.js中的start16函数-->
 			</div>
+
+			<div>
+				<div>
+					<h2 id="h27"></h2>
+				</div>
+			</div>
 		
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div id="">
@@ -282,11 +284,16 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始计算" onclick="start7()"/> <!--当执行此按钮后会执行math.js中的start7函数-->
 			</div>
-		
+			
+			<div>
+				<div>
+					<h2 id="h28"></h2>
+				</div>
+			</div>
 			
 
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -296,9 +303,15 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="获取随机数"  onclick="start6()"/> <!--当执行此按钮后会执行math.js中的start6函数-->
 			</div>
+
+			<div>
+				<div>
+					<h2 id="h29"></h2>
+				</div>
+			</div>
 		
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 		
 			
@@ -320,9 +333,15 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始判断" onclick="start8()"/> <!--当执行此按钮后会执行math.js中的start8函数-->
 			</div>
+
+			<div>
+				<div>
+					<h2 id="h210"></h2>
+				</div>
+			</div>
 			
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 			
 			
@@ -336,9 +355,15 @@
 			<div id="">
 				<input type="button" name="" id="but1" value="开始判断" onclick="start9()" /> <!--当执行此按钮后会执行math.js中的start9函数-->
 			</div>
+
+			<div>
+				<div>
+					<h2 id="h211"></h2>
+				</div>
+			</div>
 			
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 		
 			<div id="">
@@ -355,8 +380,14 @@
 				<input type="button" id="but1" value="开始判断" onclick="start10()"/> <!--当执行此按钮后会执行math.js中的start10函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h212"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -387,8 +418,14 @@
 				<input type="button" id="but1" value="开始比较" onclick="start11()"> <!--当执行此按钮后会执行math.js中的start11函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h213"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -409,8 +446,14 @@
 				<input type="button" id="but1" value="获取随机数" onclick="start12()"> <!--当点击此按钮后会执行math.js中的start12函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h214"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -431,8 +474,14 @@
 				<input type="button" id="but1" value="获取随机数" onclick="start13()"> <!--当点击此按钮后会执行math.js中的start13函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h215"></h2>
+				</div>
+			</div>
+
 			<div id="">
-			-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -453,10 +502,16 @@
 				<input type="button" id="but1" value="获取随机数" onclick="start14()"> <!--当点击此按钮后会执行math.js中的start14函数-->
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h216"></h2>
+				</div>
+			</div>
+
 
 
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -472,8 +527,14 @@
 				<input type="button" id="but1" value="开始判断" onclick="start17()">
 			</div>
 
+			<div>
+				<div>
+					<h2 id="h217"></h2>
+				</div>
+			</div>
+
 			<div id="">
-				-----------------------------------------------
+				-------------------------
 			</div>
 
 			<div>
@@ -488,6 +549,13 @@
 			<div>
 				<input type="button" id="but1" value="开始计算" onclick="start18()">
 			</div>
+
+			<div>
+				<div>
+					<h2 id="h218"></h2>
+				</div>
+			</div>
+
 	</div>
 
 	

@@ -5,9 +5,9 @@ function start1(){
 
 	//开始计算
 	if(wMath.pow(text1value,text2value) == undefined){
-
+		document.getElementById('h21').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.pow(text1value,text2value)); 
+		document.getElementById('h21').innerHTML = "结果为：" + wMath.pow(text1value,text2value); 
 	}
 }
 
@@ -17,9 +17,9 @@ function start2(){
 
 	//开始计算
 	if(wMath.abs(text3value) == undefined){
-
+		document.getElementById('h22').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.abs(text3value)); //输出结果（弹窗式）
+		document.getElementById('h22').innerHTML = "结果为：" + wMath.abs(text3value); //输出结果（弹窗式）
 	}
 }
 
@@ -30,9 +30,9 @@ function start3(){
 
 	//开始判断
 	if(wMath.max(text4value,text5value) == undefined){
-
+		document.getElementById('h23').innerHTML = "非法数字！";
 	}else{
-		alert("最大值为：" + wMath.max(text4value,text5value)) //输出结果（弹窗式）
+		document.getElementById('h23').innerHTML = "最大值为：" + wMath.max(text4value,text5value) //输出结果（弹窗式）
 	}
 }
 
@@ -45,9 +45,9 @@ function start4(){
 
 	//开始判断
 	if(wMath.min(text6value,text7value) == undefined){
-
+		document.getElementById('h24').innerHTML = "非法数字！";
 	}else{
-		alert("最小值为：" + wMath.min(text6value,text7value)); //输出结果（弹窗式）
+		document.getElementById('h24').innerHTML = "最小值为：" + wMath.min(text6value,text7value); //输出结果（弹窗式）
 	}
 }
 
@@ -57,14 +57,14 @@ function start5(){
 
 	//开始计算
 	if(wMath.trunc(text8value) == undefined){
-
+		document.getElementById('h25').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.trunc(text8value)); //输出结果（弹窗式）
+		document.getElementById('h25').innerHTML = "结果为：" + wMath.trunc(text8value); //输出结果（弹窗式）
 	}
 }
 
 function start6(){
-	alert("结果为：" + Math.random());//使用JS中Math这个内置对象的trunc方法来计算并输出结果（弹窗式）
+	document.getElementById('h29').innerHTML = "结果为：" + Math.random();//使用JS中Math这个内置对象的trunc方法来计算并输出结果（弹窗式）
 }
 
 function start7(){
@@ -73,9 +73,9 @@ function start7(){
 
 	//开始计算
 	if(wMath.round(text9value) == undefined){
-
+		document.getElementById('h28').innerHTML = "非法数字！";
 	}else{	
-		alert("结果为：" + wMath.round(text9value)); //输出结果（弹窗式）
+		document.getElementById('h28').innerHTML = "结果为：" + wMath.round(text9value); //输出结果（弹窗式）
 	}
 }
 
@@ -88,11 +88,11 @@ function start8(){
 
 	//开始判断
 	if(wMath.proportion(text10value,text11value,text12value,text13value) == undefined){
-
+		document.getElementById('h210').innerHTML = "非法数字！";
 	}else if(wMath.proportion(text10value,text11value,text12value,text13value) == true){
-		alert("成比例！"); //输出结果（弹窗式）
+		document.getElementById('h210').innerHTML = "成比例！"; //输出结果（弹窗式）
 	}else{
-		alert("不成比例！"); //输出结果（弹窗式)
+		document.getElementById('h210').innerHTML = "不成比例！"; //输出结果（弹窗式)
 	}
 	
 }
@@ -100,9 +100,9 @@ function start8(){
 function start9(){	
 	//开始判断
 	if(wMath.thisYear() == true){
-		alert("今年是闰年！"); //输出结果（弹窗式)
+		document.getElementById('h211').innerHTML = "今年是闰年！"; //输出结果（弹窗式)
 	}else{
-		alert("今年是平年！"); //输出结果（弹窗式)
+		document.getElementById('h211').innerHTML = "今年是平年！"; //输出结果（弹窗式)
 	}
 }
 
@@ -112,11 +112,11 @@ function start10(){
 
 	//开始判断
 	if(wMath.year(text14value) == undefined){
-
+		document.getElementById('h212').innerHTML = "非法数字！";
 	}else if(wMath.year(text14value) == true){
-		alert("此年份为闰年！"); //输出结果（弹窗式）
+		document.getElementById('h212').innerHTML = "此年份为闰年！"; //输出结果（弹窗式）
 	}else{
-		alert("此年份为平年！"); //输出结果（弹窗式）
+		document.getElementById('h212').innerHTML = "此年份为平年！"; //输出结果（弹窗式）
 	}
 }
 
@@ -129,11 +129,11 @@ function start11(){
 
 	//开始判断
 	if(wMath.fraction(text15value,text16value,text17value,text18value) == undefined){
-
+		document.getElementById('h213').innerHTML = "非法数字！";
 	}else if(wMath.fraction(text15value,text16value,text17value,text18value) == true){
-		alert("第一个分数大！"); //输出结果（弹窗式）
+		document.getElementById('h213').innerHTML = "第一个分数大！"; //输出结果（弹窗式）
 	}else{
-		alert("第二个分数大！"); //输出结果（弹窗式）
+		document.getElementById('h213').innerHTML = "第二个分数大！"; //输出结果（弹窗式）
 	}
 }
 
@@ -144,9 +144,9 @@ function start12(){
 
 	//开始比较
 	if(wMath.randomFromXY(text19value,text20value) == undefined){
-
+		document.getElementById('h214').innerHTML = "非法数字！";
 	}else{
-		alert("随机数为：" + wMath.randomFromXY(text19value,text20value));
+		document.getElementById('h214').innerHTML = "随机数为：" + wMath.randomFromXY(text19value,text20value);
 	}
 }
 
@@ -157,9 +157,9 @@ function start13(){
 
 	//开始比较
 	if(wMath.randomFromXYForInteger(text21value,text22value) == undefined){
-
+		document.getElementById('h215').innerHTML = "非法数字！";
 	}else{
-		alert("随机数为：" + wMath.randomFromXYForInteger(text21value,text22value));
+		document.getElementById('h215').innerHTML = "随机数为：" + wMath.randomFromXYForInteger(text21value,text22value);
 	}
 }
 
@@ -170,9 +170,9 @@ function start14(){
 
 	//开始比较
 	if(wMath.randomFromXYForIntegerincludeXY(text23value,text24value) == undefined){
-
+		document.getElementById('h216').innerHTML = "非法数字！";
 	}else{
-		alert("随机数为：" + (wMath.randomFromXYForIntegerincludeXY(text23value,text24value)));
+		document.getElementById('h216').innerHTML = "随机数为：" + (wMath.randomFromXYForIntegerincludeXY(text23value,text24value));
 	}
 }
 
@@ -182,9 +182,9 @@ function start15(){
 
 	//开始计算
 	if(wMath.ceil(text25value) == undefined){
-
+		document.getElementById('h26').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.ceil(text25value));
+		document.getElementById('h26').innerHTML = "结果为：" + wMath.ceil(text25value);
 	}
 }
 
@@ -194,9 +194,9 @@ function start16(){
 
 	//开始计算
 	if(wMath.floor(text26value) == undefined){
-
+		document.getElementById('h27').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.floor(text26value));
+		document.getElementById('h27').innerHTML = "结果为：" + wMath.floor(text26value);
 	}
 }
 
@@ -206,9 +206,9 @@ function start17(){
 
 	//开始判断
 	if(wMath.sign(text27value) == undefined){
-
+		document.getElementById('h217').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.sign(text27value));
+		document.getElementById('h217').innerHTML = "结果为：" + wMath.sign(text27value);
 	}
 }
 
@@ -218,8 +218,8 @@ function start18(){
 
 	//开始判断
 	if(wMath.oppositeNumber(text28value) == undefined){
-
+		document.getElementById('h218').innerHTML = "非法数字！";
 	}else{
-		alert("结果为：" + wMath.oppositeNumber(text28value));
+		document.getElementById('h218').innerHTML = "结果为：" + wMath.oppositeNumber(text28value);
 	}
 }
