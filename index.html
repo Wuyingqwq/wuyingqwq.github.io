@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>无影的软件</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>无影的软件</title>
 	<!--用于wMath.js-->
-	<script src="http://raw.githack.com/Wuyingqwq/wMath/main/wMath/wMath.js"></script> <!--引用JS-->
+	<script src="js/wMath.js"></script>
 
-	<script src="js/math.js"></script> <!--引用JS-->
-	
-	<link rel="stylesheet" type="text/css" href="css/allButtons.css"/> <!--引用CSS-->
-	<link rel="stylesheet" href="css/background.css"> <!--引用CSS-->
-	<link rel="stylesheet" href="css/functions.css"> <!--引用CSS-->
-	<link rel="stylesheet" href="css/home.css"> <!--引用CSS-->
-	<link rel="stylesheet" href="css/menu.css"> <!--引用CSS-->
-	<link rel="stylesheet" href="css/texts.css"> <!--引用CSS-->
-	<script src="js/h2.js"></script>
+	<script src="js/sht.js"></script>
+
+	<script src="js/copy.js"></script>
+
+	<script src="js/math.js"></script>
+	<!--引用JS-->
+
+	<link rel="stylesheet" type="text/css" href="css/allButtons.css" />
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/background.css">
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/functions.css">
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/home.css">
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/menu.css">
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/texts.css">
+	<!--引用CSS-->
+	<link rel="stylesheet" href="css/copy.css">
 </head>
-<body id="body">
 
+<body id="body">
+	<textarea cols="20" rows="10" id="Download">https://qwqwuying.lanzoui.com/b01iktu4d</textarea>
+	<textarea cols="20" rows="10" id="Github">https://github.com/Wuyingqwq</textarea>
 
 
 
@@ -31,7 +45,7 @@
 
 
 	<!--获取当前时间按钮-->
-	
+
 	<div>
 		<input type="button" id="getThisTimeButton" value="获取当前时间" onclick="onGetThisTime()">
 	</div>
@@ -46,18 +60,20 @@
 	<div id="home">
 		<h1 id="homesh1">欢迎来到无影的软件，请通过右上角导航栏选择对应模块！</h1>
 		<div id="changelogs">
+
+
 			<div id="">
-				<h1>版本：1.9.</h1>
+				<h1>版本：1.9.1.</h1>
 			</div>
-			
+
 			<div id="">
 				<h1>变更日志：</h1>
 			</div>
-	
+
 			<div>
-				<h1>/ 结果输出方式.</h1>
+				<h1>/ 修复bug，优化性能.</h1>
 			</div>
-	
+
 			<div>
 				<h1></h1>
 			</div>
@@ -67,8 +83,15 @@
 					地图（点击前往）
 				</a>
 			</h1>
+
+			<h1 id="map">
+				<input type="button" id="but1" value="点我复制下载链接" onclick="copyDownloadLink()">
+				<input type="button" id="but1" value="点我复制GitHub链接" onclick="copyGithubLink()">
+			</h1>
+
+			<h1 id="map">下载密码：Wuying</h1>
 		</div>
-			
+
 	</div>
 
 
@@ -79,7 +102,8 @@
 	<!--获取当前时间区-->
 	<div>
 		<div id="getThisTime">
-			<input type="button" id="but1" value="点此获取当前时间" onclick="alert(wMath.getThisTime('当前时间：','年','月','日','时','分','秒'))">
+			<input type="button" id="but1" value="点此获取当前时间"
+				onclick="alert(wMath.getThisTime('当前时间：','年','月','日','时','分','秒'))">
 		</div>
 	</div>
 
@@ -93,473 +117,492 @@
 	<!--数学区-->
 
 	<div id="math">
-		
+
 		<div id="">
-			<input type="button" name="" id="but1" value="圆周率" onclick="document.getElementById('h2').innerHTML = Math.PI;" /> <!--当点击此按钮后会输出圆周率（弹窗式）-->
-			</div>
+			<input type="button" name="" id="but1" value="圆周率"
+				onclick="document.getElementById('h2').innerHTML = Math.PI;" />
+			<!--当点击此按钮后会输出圆周率（弹窗式）-->
+		</div>
 
-			<div>
-				<h1 id="h2"></h1>
-			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
-				计算x的y次幂:
-			</div>
-		
-			<div id="">
-			
-				<input type="text" name="" id="text1" value="" /> 
-				的
-				<input type="text" name="" id="text2" value=""/>  			次幂
-			
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始计算" onclick="start1()"> <!--点击此按钮后会执行math.js中的start1函数-->
-			</div>
+		<div>
+			<h1 id="h2"></h1>
+		</div>
 
-			<div>
-				<h2 id="h21"></h2>
-			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			计算x的y次幂:
+		</div>
+
+		<div id="">
+
+			<input type="text" name="" id="text1" value="" />
+			的
+			<input type="text" name="" id="text2" value="" /> 次幂
+
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始计算" onclick="start1()">
+			<!--点击此按钮后会执行math.js中的start1函数-->
+		</div>
+
+		<div>
+			<h2 id="h21"></h2>
+		</div>
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
 			计算一个数的绝对值:
-			</div>
-		
-			<div id="">
-			
-			
-			<input type="text" name="" id="text3" value="" /> 
-			
-			 
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始计算" onclick="start2()" /> <!--当点击此按钮后会执行math.js中的start2函数-->
-			</div>
+		</div>
 
-			<div>
-				<h2 id="h22"></h2>
-			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
-				判断两个数的最大值:
-			</div>
-		
-			<div id="">
-				数字1:
-				<input type="text" name="" id="text4" value="" /> 
-			</div>
-		
-			<div id="">
-				数字2:
-				<input type="text" name="" id="text5" value="" /> 
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始判断" onclick="start3()"/> <!--当点击此按钮后会执行math.js中的start3函数-->
-			</div>
+		<div id="">
 
-			<div>
-				<h2 id="h23"></h2>
-			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
-				判断两个数的最小值:
-			</div>
-		
-			<div id="">
-				数字1:
-				<input type="text" name="" id="text6" value="" /> 
-			</div>
-		
-			<div id="">
-				数字2:
-				<input type="text" name="" id="text7" value="" /> 
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始判断" onclick="start4()"/> <!--当点击此按钮后会执行math.js中的start4函数-->
-			</div>
 
-			<div>
-				<h2 id="h24"></h2>
-			</div>
+			<input type="text" name="" id="text3" value="" />
 
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
+
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始计算" onclick="start2()" />
+			<!--当点击此按钮后会执行math.js中的start2函数-->
+		</div>
+
+		<div>
+			<h2 id="h22"></h2>
+		</div>
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			判断两个数的最大值:
+		</div>
+
+		<div id="">
+			数字1:
+			<input type="text" name="" id="text4" value="" />
+		</div>
+
+		<div id="">
+			数字2:
+			<input type="text" name="" id="text5" value="" />
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始判断" onclick="start3()" />
+			<!--当点击此按钮后会执行math.js中的start3函数-->
+		</div>
+
+		<div>
+			<h2 id="h23"></h2>
+		</div>
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			判断两个数的最小值:
+		</div>
+
+		<div id="">
+			数字1:
+			<input type="text" name="" id="text6" value="" />
+		</div>
+
+		<div id="">
+			数字2:
+			<input type="text" name="" id="text7" value="" />
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始判断" onclick="start4()" />
+			<!--当点击此按钮后会执行math.js中的start4函数-->
+		</div>
+
+		<div>
+			<h2 id="h24"></h2>
+		</div>
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
 			给一个数取整（去尾法）：
-			</div>
-		
-			<div id="">
-				<input type="text" name="" id="text8" value="" /> 
-			
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始计算"  onclick="start5()"/> <!--当点击此按钮后会执行math.js中的start5函数-->
-			</div>
+		</div>
 
+		<div id="">
+			<input type="text" name="" id="text8" value="" />
+
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始计算" onclick="start5()" />
+			<!--当点击此按钮后会执行math.js中的start5函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h25"></h2>
-				</div>
+				<h2 id="h25"></h2>
 			</div>
+		</div>
 
-			<div id="">
-				-------------------------
-			</div>
+		<div id="">
+			-------------------------
+		</div>
 
+		<div>
+			将一个小数取整（进一法）：
+		</div>
+
+		<div>
+			<input type="text" id="text25">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="开始计算" onclick="start15()">
+			<!--当点击此按钮后会执行math.js中的start15函数-->
+		</div>
+
+		<div>
 			<div>
-				将一个小数取整（进一法）：
+				<h2 id="h26"></h2>
 			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			将一个小数向下取整：
+		</div>
+
+		<div>
+			<input type="text" id="text26">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="开始计算" onclick="start16()">
+			<!--当点击此按钮后会执行math.js中的start16函数-->
+		</div>
+
+		<div>
 			<div>
-				<input type="text" id="text25">
+				<h2 id="h27"></h2>
 			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			将一个小数四舍五入为整数（注意是小数）：
+		</div>
+
+		<div id="">
+			<input type="text" name="" id="text9" value="" />
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始计算" onclick="start7()" />
+			<!--当执行此按钮后会执行math.js中的start7函数-->
+		</div>
+
+		<div>
 			<div>
-				<input type="button" id="but1" value="开始计算" onclick="start15()"> <!--当点击此按钮后会执行math.js中的start15函数-->
+				<h2 id="h28"></h2>
 			</div>
+		</div>
 
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			从0到1随机一个多位小数（不包括0和1）：
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="获取随机数" onclick="start6()" />
+			<!--当执行此按钮后会执行math.js中的start6函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h26"></h2>
-				</div>
+				<h2 id="h29"></h2>
 			</div>
+		</div>
 
-			<div id="">
-				-------------------------
-			</div>
+		<div id="">
+			-------------------------
+		</div>
 
+
+
+		<div id="">
+			判断两个比是否成比例：
+		</div>
+
+		<div id="">
+			<input type="text" name="" id="text10" value="" />
+			:
+			<input type="text" name="" id="text11" value="" />
+			=
+			<input type="text" name="" id="text12" value="" />
+			:
+			<input type="text" name="" id="text13" value="" />
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始判断" onclick="start8()" />
+			<!--当执行此按钮后会执行math.js中的start8函数-->
+		</div>
+
+		<div>
 			<div>
-				将一个小数向下取整：
+				<h2 id="h210"></h2>
 			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+
+
+
+
+		<div id="">
+			判断今年是闰年还是平年：
+		</div>
+
+		<div id="">
+			<input type="button" name="" id="but1" value="开始判断" onclick="start9()" />
+			<!--当执行此按钮后会执行math.js中的start9函数-->
+		</div>
+
+		<div>
 			<div>
-				<input type="text" id="text26">
+				<h2 id="h211"></h2>
 			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div id="">
+			判断指定年份是闰年还是平年：
+		</div>
+
+		<div id="">
+			年份：
+			<input type="text" name="" id="text14" value="" />
+
+		</div>
+
+		<div id="">
+			<input type="button" id="but1" value="开始判断" onclick="start10()" />
+			<!--当执行此按钮后会执行math.js中的start10函数-->
+		</div>
+
+		<div>
 			<div>
-				<input type="button" id="but1" value="开始计算" onclick="start16()">  <!--当点击此按钮后会执行math.js中的start16函数-->
+				<h2 id="h212"></h2>
 			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			分数比较大小：
+		</div>
+
+		<div>
+			第一个分数的分子：
+			<input type="text" id="text15">
+		</div>
+
+		<div>
+			第一个分数的分母：
+			<input type="text" id="text16">
+		</div>
+
+		<div>
+			第二个分数的分子：
+			<input type="text" id="text17">
+		</div>
+
+		<div>
+			第二个分数的分母：
+			<input type="text" id="text18">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="开始比较" onclick="start11()">
+			<!--当执行此按钮后会执行math.js中的start11函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h27"></h2>
-				</div>
+				<h2 id="h213"></h2>
 			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
+		</div>
 
-			<div id="">
-				将一个小数四舍五入为整数（注意是小数）：
-			</div>
-		
-			<div id="">
-				<input type="text" name="" id="text9" value="" /> 
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始计算" onclick="start7()"/> <!--当执行此按钮后会执行math.js中的start7函数-->
-			</div>
-			
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			从x和y中随机一个多位小数（大于或等于x，小于y）：
+		</div>
+
+		<div>
+			x:
+			<input type="text" id="text19">
+		</div>
+
+		<div>
+			y:
+			<input type="text" id="text20">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="获取随机数" onclick="start12()">
+			<!--当点击此按钮后会执行math.js中的start12函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h28"></h2>
-				</div>
+				<h2 id="h214"></h2>
 			</div>
-			
+		</div>
 
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
-				从0到1随机一个多位小数（不包括0和1）：
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="获取随机数"  onclick="start6()"/> <!--当执行此按钮后会执行math.js中的start6函数-->
-			</div>
+		<div id="">
+			-------------------------
+		</div>
 
+		<div>
+			从x和y中随机一个整数（大于x，小于y）：
+		</div>
+
+		<div>
+			x:
+			<input type="text" id="text21">
+		</div>
+
+		<div>
+			y:
+			<input type="text" id="text22">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="获取随机数" onclick="start13()">
+			<!--当点击此按钮后会执行math.js中的start13函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h29"></h2>
-				</div>
+				<h2 id="h215"></h2>
 			</div>
-		
-			<div id="">
-				-------------------------
-			</div>
-		
-			
-		
-			<div id="">
-				判断两个比是否成比例：
-			</div>
-		
-			<div id="">
-				<input type="text" name="" id="text10" value="" /> 
-				:
-				<input type="text" name="" id="text11" value="" /> 
-				=
-				<input type="text" name="" id="text12" value="" /> 
-				:
-				<input type="text" name="" id="text13" value="" /> 
-			</div>
-		
-			<div id="">
-				<input type="button" name="" id="but1" value="开始判断" onclick="start8()"/> <!--当执行此按钮后会执行math.js中的start8函数-->
-			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			从x和y中随机一个整数（包括x，y）：
+		</div>
+
+		<div>
+			x:
+			<input type="text" id="text23">
+		</div>
+
+		<div>
+			y:
+			<input type="text" id="text24">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="获取随机数" onclick="start14()">
+			<!--当点击此按钮后会执行math.js中的start14函数-->
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h210"></h2>
-				</div>
+				<h2 id="h216"></h2>
 			</div>
-			
-			<div id="">
-				-------------------------
-			</div>
-			
-			
-			
-			
-			
-			<div id="">
-				判断今年是闰年还是平年：
-			</div>
-				
-			<div id="">
-				<input type="button" name="" id="but1" value="开始判断" onclick="start9()" /> <!--当执行此按钮后会执行math.js中的start9函数-->
-			</div>
+		</div>
 
+
+
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			判断数字X为正负数：
+		</div>
+
+		<div>
+			X：
+			<input type="text" id="text27">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="开始判断" onclick="start17()">
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h211"></h2>
-				</div>
+				<h2 id="h217"></h2>
 			</div>
-			
-			<div id="">
-				-------------------------
-			</div>
-		
-			<div id="">
-				判断指定年份是闰年还是平年：
-			</div>
-			
-			<div id="">
-				年份：
-				<input type="text" name="" id="text14" value="" /> 
-				 
-			</div>
-			
-			<div id="">
-				<input type="button" id="but1" value="开始判断" onclick="start10()"/> <!--当执行此按钮后会执行math.js中的start10函数-->
-			</div>
+		</div>
 
+		<div id="">
+			-------------------------
+		</div>
+
+		<div>
+			计算相反数：
+		</div>
+
+		<div>
+			数字：
+			<input type="text" id="text28">
+		</div>
+
+		<div>
+			<input type="button" id="but1" value="开始计算" onclick="start18()">
+		</div>
+
+		<div>
 			<div>
-				<div>
-					<h2 id="h212"></h2>
-				</div>
+				<h2 id="h218"></h2>
 			</div>
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				分数比较大小：
-			</div>
-
-			<div>
-				第一个分数的分子：
-				<input type="text" id="text15">
-			</div>
-
-			<div>
-				第一个分数的分母：
-				<input type="text" id="text16">
-			</div>
-
-			<div>
-				第二个分数的分子：
-				<input type="text" id="text17">
-			</div>
-
-			<div>
-				第二个分数的分母：
-				<input type="text" id="text18">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="开始比较" onclick="start11()"> <!--当执行此按钮后会执行math.js中的start11函数-->
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h213"></h2>
-				</div>
-			</div>
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				从x和y中随机一个多位小数（大于或等于x，小于y）：
-			</div>
-
-			<div>
-				x:
-				<input type="text" id="text19">
-			</div>
-
-			<div>
-				y:
-				<input type="text" id="text20">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="获取随机数" onclick="start12()"> <!--当点击此按钮后会执行math.js中的start12函数-->
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h214"></h2>
-				</div>
-			</div>
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				从x和y中随机一个整数（大于x，小于y）：
-			</div>
-
-			<div>
-				x:
-				<input type="text" id="text21">
-			</div>
-
-			<div>
-				y:
-				<input type="text" id="text22">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="获取随机数" onclick="start13()"> <!--当点击此按钮后会执行math.js中的start13函数-->
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h215"></h2>
-				</div>
-			</div>
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				从x和y中随机一个整数（包括x，y）：
-			</div>
-
-			<div>
-				x:
-				<input type="text" id="text23">
-			</div>
-
-			<div>
-				y:
-				<input type="text" id="text24">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="获取随机数" onclick="start14()"> <!--当点击此按钮后会执行math.js中的start14函数-->
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h216"></h2>
-				</div>
-			</div>
-
-
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				判断数字X为正负数：
-			</div>
-
-			<div>
-				X：
-				<input type="text" id="text27">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="开始判断" onclick="start17()">
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h217"></h2>
-				</div>
-			</div>
-
-			<div id="">
-				-------------------------
-			</div>
-
-			<div>
-				计算相反数：
-			</div>
-
-			<div>
-				数字：
-				<input type="text" id="text28">
-			</div>
-
-			<div>
-				<input type="button" id="but1" value="开始计算" onclick="start18()">
-			</div>
-
-			<div>
-				<div>
-					<h2 id="h218"></h2>
-				</div>
-			</div>
+		</div>
 
 	</div>
 
-	
-	
+
+
 
 </body>
+
 </html>
