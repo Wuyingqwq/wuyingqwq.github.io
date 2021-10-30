@@ -1,5 +1,5 @@
 # Update at 103021.
-# Version: 1.9.1.
+# Version: V2.0.
 # Changelogs:
-# / Fix bugs and optimize performance.
+# + Binary linear equation.
 # Made by Wuying.
