@@ -3,6 +3,7 @@ function onMath(){
     document.getElementById('getThisTime').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('changelogs').style.display = 'none';
+    document.getElementById('matheq').style.display = 'none';
 }
 
 function onGetThisTime(){
@@ -10,6 +11,7 @@ function onGetThisTime(){
     document.getElementById('math').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('changelogs').style.display = 'none';
+    document.getElementById('matheq').style.display = 'none';
 }
 
 function onChangelogs(){
@@ -17,4 +19,13 @@ function onChangelogs(){
     document.getElementById('math').style.display = 'none';
     document.getElementById('home').style.display = 'none';
     document.getElementById('getThisTime').style.display = 'none';
+    document.getElementById('matheq').style.display = 'none';
+}
+
+function onEq() {
+    document.getElementById('matheq').style.display = 'block';
+    document.getElementById('changelogs').style.display = 'none';
+    document.getElementById('math').style.display = 'none';
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('getThisTime').style.display = 'none'; 
 }
