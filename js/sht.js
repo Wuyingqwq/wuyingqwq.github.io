@@ -1,31 +1,19 @@
 function onMath(){
     document.getElementById('math').style.display = 'block';
-    document.getElementById('getThisTime').style.display = 'none';
     document.getElementById('home').style.display = 'none';
-    document.getElementById('changelogs').style.display = 'none';
-    document.getElementById('matheq').style.display = 'none';
+    document.getElementById('other').style.display = 'none';
 }
 
-function onGetThisTime(){
-    document.getElementById('getThisTime').style.display = 'block';
+
+function onOther(){
+    document.getElementById('other').style.display = 'block';
     document.getElementById('math').style.display = 'none';
     document.getElementById('home').style.display = 'none';
-    document.getElementById('changelogs').style.display = 'none';
-    document.getElementById('matheq').style.display = 'none';
 }
 
-function onChangelogs(){
-    document.getElementById('changelogs').style.display = 'block';
+function backHome() {
+    document.getElementById('home').style.display = 'block';
+    document.getElementById('other').style.display = 'block';
     document.getElementById('math').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('getThisTime').style.display = 'none';
-    document.getElementById('matheq').style.display = 'none';
 }
 
-function onEq() {
-    document.getElementById('matheq').style.display = 'block';
-    document.getElementById('changelogs').style.display = 'none';
-    document.getElementById('math').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('getThisTime').style.display = 'none'; 
-}

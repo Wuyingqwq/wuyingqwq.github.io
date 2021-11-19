@@ -21,11 +21,13 @@ var wMath = {
         //=======================================
 
         var x1 = algebra.parse(x);
-        var answer1 = x1.solveFor("y");
+        var answer1 = 99;
+        answer1 = x1.solveFor("x");
         //console.log("y = " + answer1.toString());
 
         var x2 = algebra.parse(y);
-        var answer2 = x2.solveFor("y");
+        var answer2 = 99;
+        answer2 = x2.solveFor("y");
         //console.log("y = " + answer2.toString());
         //=================================================
         //解出X值
