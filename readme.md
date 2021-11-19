@@ -1,5 +1,6 @@
-# Update at 103121.
-# Version: V2.0.1.
+# Update at 111921.
+# Version: V2.5.
 # Changelogs:
-# / Fix bugs.
-# Made by Wuying.
+# - Some useless functions.
+# + Back to home button.
+# + Original background.
