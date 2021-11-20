@@ -1,16 +1,16 @@
-#xsexpression{
+#xsexpression {
     color: red;
 }
 
-#ysexpression{
+#ysexpression {
     color: red;
 }
 
-#xsresult{
+#xsresult {
     color: red;
 }
 
-#ysresult{
+#ysresult {
     color: red;
 }
 
@@ -87,5 +87,21 @@
 }
 
 #h218 {
+    color: red;
+}
+
+#AMN {
+    color: red;
+}
+
+#CMMN {
+    color: red;
+}
+
+#AMNO {
+    color: red;
+}
+
+#CMMNO {
     color: red;
 }

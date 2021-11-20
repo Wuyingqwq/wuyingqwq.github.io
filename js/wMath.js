@@ -12,6 +12,124 @@ You can find it in github.
 var getDate = new Date();
 
 var wMath = {
+    //连续数相乘
+    CMMNO: function (x, y) {
+        let text1 = x;
+        let text2 = y;
+
+        var result = '';
+        result = +result;
+        result = 1;
+
+        for (var i2 = text1; i2 <= text2; i2++) {
+
+            var num = i2;
+            num = +num;
+            console.log('num = ' + num);
+            console.log("num's type = " + typeof (num));
+
+
+            result = result * num;
+            console.log(result)
+        }
+
+        return result;
+    },
+
+
+    //连续数相加
+    AMNO: function (x, y) {
+        let text1 = x;
+        let text2 = y;
+
+        var result = '';
+        result = +result;
+        result = 0;
+
+        for (var i2 = text1; i2 <= text2; i2++) {
+
+            var num = i2;
+            num = +num;
+            console.log('num = ' + num);
+            console.log("num's type = " + typeof (num));
+
+
+            result = result + num;
+            console.log('result = ' + result)
+        }
+
+        return result;
+    },
+
+    //多个数相乘
+    CMMN: function (x) {
+        let value = x;
+
+        var result = '';
+        result = +result;
+        result = 1;
+
+        let values = value.split(',') // 根据运算符分割数字
+        console.log(values)
+        /*
+        let num1 = parseFloat(values[0])
+        let num2 = parseFloat(values[1])
+        */
+
+        let i = values.length - 1;
+
+        //console.log(i)
+
+        for (var i2 = 0; i2 <= i; i2++) {
+
+            var num = parseFloat(values[i2]);
+            num = +num;
+            console.log('num = ' + num);
+            console.log("num's type = " + typeof (num));
+
+
+            result = result * num;
+            console.log(result)
+        }
+
+        return result;
+    },
+
+    //多个数相加
+    AMN: function (x) {
+        let value = x;
+        console.log('value = ' + value);
+
+        var result = '';
+        result = +result;
+        result = 0;
+
+        let values = value.split(',') // 根据运算符分割数字
+        console.log(values)
+        /*
+        let num1 = parseFloat(values[0])
+        let num2 = parseFloat(values[1])
+        */
+
+        let i = values.length - 1;
+
+        //console.log(i)
+
+        for (var i2 = 0; i2 <= i; i2++) {
+
+            var num = parseFloat(values[i2]);
+            num = +num;
+            console.log('num = ' + num);
+            console.log("num's type = " + typeof (num));
+
+
+            result = result + num;
+            console.log(result)
+        }
+
+        return result;
+    },
+
     //解二元一次方程（使用时请务必引入Algebra.js，原Github链接为：https://github.com/nicolewhite/algebra.js）
     //返回值是一个数组，[0]为x的表达式，[1]为y的表达式,[2]为x的值,[3]为y的值
     eq: function (x, y) {
@@ -52,7 +170,7 @@ var wMath = {
         console.log(xsresult)
         console.log(ysresult)
         */
-        
+
         var results = new Array(xsexpression, ysexpression, xsresult, ysresult);
         return results;
 
