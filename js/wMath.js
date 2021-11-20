@@ -9,6 +9,20 @@ You can find it in github.
 本JS将会持续更新。
 */
 
+/*
+解二元二次方程函数名：eq()
+需传入两个方程式子，且未知数必须要为x,y
+
+使用时请务必引入Algebra.js，原Github链接为：https://github.com/nicolewhite/algebra.js
+返回值是一个数组，[0]为x的表达式，[1]为y的表达式,[2]为x的值,[3]为y的值
+
+注：请务必输入正确的方程否则会报错，报错内容如下：
+wMath.js:142 Uncaught TypeError: Cannot read properties of undefined (reading 'solveFor')
+如不是以上错误，请自行检查错误原因
+
+E-mail:wuyingqwq@gmail.com
+*/ 
+
 var getDate = new Date();
 
 var wMath = {
