@@ -1,6 +1,4 @@
-# Update at 111921.
-# Version: V2.5.
+# Update at 112021.
+# Version: V2.6.
 # Changelogs:
-# - Some useless functions.
-# + Back to home button.
-# + Original background.
+# / Fix bugs.
