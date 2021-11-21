@@ -1,0 +1,16 @@
+#qqimg {
+    display: block;
+}
+
+#zfb {
+    position: absolute;
+    top: 0px;
+    left: 500px;
+}
+
+#zfbimg {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    display: block;
+}
