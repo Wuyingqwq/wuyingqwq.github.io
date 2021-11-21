@@ -2,6 +2,7 @@
 
 # Programing Language:JavaScript & Html5 & Css.
 
+# Version:1.6.
 
 # Software Language:Chinese.
 
