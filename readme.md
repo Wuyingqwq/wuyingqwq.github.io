@@ -1,7 +1,6 @@
-# Update at 112021.
-# Version: V3.0.
+# Update at 112721.
+# Version: V3.0.2.
 # Changelogs:
-# + Add multiple numbers.
-# + Multiply multiple numbers.
-# + Add consecutive numbers.
-# + Multiply consecutive numbers.
+# - Add multiple numbers.
+# - Add consecutive numbers.
+# / Bugs.
