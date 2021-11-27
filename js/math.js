@@ -112,29 +112,26 @@ function start19() {
 	document.getElementById('ysresult').innerHTML = 'y的解为：' + wMath.eq(text29value, text30value)[3];
 }
 
-function start20() {
-	let text31value = document.getElementById('text31').value;
-	//console.log('text == ' + text31value);
-
-	document.getElementById('AMN').innerHTML = '结果为：' + wMath.AMN(text31value);
-}
-
-function start21() {
-	let text32value = document.getElementById('text32').value;
-
-	document.getElementById('CMMN').innerHTML = '结果为：' + wMath.CMMN(text32value);
-}
-
 function start22() {
 	let text33value = document.getElementById('text33').value;
 	let text34value = document.getElementById('text34').value;
+	
+	if(wMath.AMNO(text33value, text34value) == undefined){
+		document.getElementById('AMNO').innerHTML = "非法数字！"
+	}else{
+		document.getElementById('AMNO').innerHTML = '结果为：' + wMath.AMNO(text33value, text34value);
+	}
 
-	document.getElementById('AMNO').innerHTML = '结果为：' + wMath.AMNO(text33value, text34value);
+	
 }
 
 function start23() {
 	let text35value = document.getElementById('text35').value;
 	let text36value = document.getElementById('text36').value;
 
-	document.getElementById('CMMNO').innerHTML = '结果为：' + wMath.CMMNO(text35value, text36value);
+	if(wMath.CMMNO(text35value, text36value) == undefined){
+		document.getElementById('CMMNO').innerHTML = "非法数字！"
+	}else{
+		document.getElementById('CMMNO').innerHTML = '结果为：' + wMath.CMMNO(text35value, text36value);
+	}
 }
