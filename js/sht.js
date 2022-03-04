@@ -6,12 +6,6 @@ function onMath(){
 }
 
 
-function onOther(){
-    document.getElementById('other').style.display = 'block';
-    document.getElementById('math').style.display = 'none';
-    document.getElementById('home').style.display = 'none';
-}
-
 function backHome() {
     document.getElementById('home').style.display = 'block';
     document.getElementById('other').style.display = 'block';

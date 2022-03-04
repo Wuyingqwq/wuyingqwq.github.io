@@ -1,7 +1,7 @@
 function start1() {
 	//获取编辑框1,2的内容
-	let text1value = document.getElementById("text1").value;
-	let text2value = document.getElementById("text2").value;
+	let text1value = wMath_html.getValue("text1");
+	let text2value = wMath_html.getValue("text2");
 
 	//开始计算
 	if (wMath.pow(text1value, text2value) == undefined) {
@@ -10,7 +10,6 @@ function start1() {
 		document.getElementById('h21').innerHTML = "结果为：" + wMath.pow(text1value, text2value);
 	}
 }
-
 
 function start6() {
 	document.getElementById('h29').innerHTML = "结果为：" + Math.random(); //使用JS中Math这个内置对象的trunc方法来计算并输出结果（弹窗式）
@@ -30,7 +29,7 @@ function start9() {
 
 function start10() {
 	//获取编辑框14的内容
-	let text14value = document.getElementById("text14").value;
+	let text14value = wMath_html.getValue("text14");
 
 	//开始判断
 	if (wMath.year(text14value) == undefined) {
@@ -44,10 +43,10 @@ function start10() {
 
 function start11() {
 	//获取编辑框15,16,17,18的内容
-	let text15value = document.getElementById("text15").value;
-	let text16value = document.getElementById("text16").value;
-	let text17value = document.getElementById("text17").value;
-	let text18value = document.getElementById("text18").value;
+	let text15value = wMath_html.getValue("text15");
+	let text16value = wMath_html.getValue("text16");
+	let text17value = wMath_html.getValue("text17");
+	let text18value = wMath_html.getValue("text18");
 
 	//开始判断
 	if (wMath.fraction(text15value, text16value, text17value, text18value) == undefined) {
@@ -61,8 +60,8 @@ function start11() {
 
 function start12() {
 	//获取编辑框19,20的内容
-	let text19value = document.getElementById("text19").value;
-	let text20value = document.getElementById("text20").value;
+	let text19value = wMath_html.getValue("text19");
+	let text20value = wMath_html.getValue("text20");
 
 	//开始比较
 	if (wMath.randomFromXY(text19value, text20value) == undefined) {
@@ -74,8 +73,8 @@ function start12() {
 
 function start13() {
 	//获取编辑框21,22的内容
-	let text21value = document.getElementById("text21").value;
-	let text22value = document.getElementById("text22").value;
+	let text21value = wMath_html.getValue("text21");
+	let text22value = wMath_html.getValue("text22");
 
 	//开始比较
 	if (wMath.randomFromXYForInteger(text21value, text22value) == undefined) {
@@ -87,8 +86,8 @@ function start13() {
 
 function start14() {
 	//获取编辑框23,24的内容
-	let text23value = document.getElementById("text23").value;
-	let text24value = document.getElementById("text24").value;
+	let text23value = wMath_html.getValue("text23");
+	let text24value = wMath_html.getValue("text24");
 
 	//开始比较
 	if (wMath.randomFromXYForIntegerincludeXY(text23value, text24value) == undefined) {
@@ -103,8 +102,8 @@ function start14() {
 
 
 function start19() {
-	let text29value = document.getElementById("text29").value;
-	let text30value = document.getElementById("text30").value;
+	let text29value = wMath_html.getValue("text29");
+	let text30value = wMath_html.getValue("text30");
 
 	document.getElementById('xsexpression').innerHTML = 'x的表达式为：' + wMath.eq(text29value, text30value)[0];
 	document.getElementById('ysexpression').innerHTML = 'y的表达式为：' + wMath.eq(text29value, text30value)[1];
@@ -113,8 +112,8 @@ function start19() {
 }
 
 function start22() {
-	let text33value = document.getElementById('text33').value;
-	let text34value = document.getElementById('text34').value;
+	let text33value = wMath_html.getValue('text33');
+	let text34value = wMath_html.getValue('text34');
 	
 	if(wMath.AMNO(text33value, text34value) == undefined){
 		document.getElementById('AMNO').innerHTML = "非法数字！"
@@ -126,12 +125,32 @@ function start22() {
 }
 
 function start23() {
-	let text35value = document.getElementById('text35').value;
-	let text36value = document.getElementById('text36').value;
+	let text35value = wMath_html.getValue('text35');
+	let text36value = wMath_html.getValue('text36');
 
 	if(wMath.CMMNO(text35value, text36value) == undefined){
 		document.getElementById('CMMNO').innerHTML = "非法数字！"
 	}else{
 		document.getElementById('CMMNO').innerHTML = '结果为：' + wMath.CMMNO(text35value, text36value);
+	}
+}
+
+function start24(){
+	let text37value = wMath_html.getValue('text37');
+
+	if(wMath.complementAngle(text37value) == undefined){
+		document.getElementById('complementAngle').innerHTML = "非法数字！"
+	}else{
+		document.getElementById('complementAngle').innerHTML = '结果为：' + wMath.complementAngle(text37value);
+	}
+}
+
+function start25(){
+	let text38value = wMath_html.getValue('text38');
+
+	if(wMath.complementAngle(text38value) == undefined){
+		document.getElementById('supplementaryAngle').innerHTML = "非法数字！"
+	}else{
+		document.getElementById('supplementaryAngle').innerHTML = '结果为：' + wMath.supplementaryAngle(text38value);
 	}
 }
