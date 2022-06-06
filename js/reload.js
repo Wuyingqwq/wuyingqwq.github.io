@@ -1,3 +1,0 @@
-function reloadHtml(){
-    location.reload();
-}
