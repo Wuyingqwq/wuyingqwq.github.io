@@ -1,3 +1,7 @@
+/*
+index.js
+*/ 
+
 var nums = 1;
 var score = 0;
 var usedQuestions = []
@@ -8,6 +12,14 @@ function finish() {
 
     document.getElementById("menu").style.display = "block";
     document.getElementById("QA").style.display = "none";
+
+    /*
+        对数据清零
+    */
+    nums = 1;
+    score = 0;
+    usedQuestions = [];
+    randNums = 0;
 }
 
 function nextLevel() {
@@ -20,18 +32,6 @@ function nextLevel() {
     //清空选择
     for (let i = 0; i < radios.length; i++) {
         radios[i].checked = ''
-    }
-
-    //必测题
-    if (nums < 4) { 
-        var q = questions_must[nums - 1];
-        nums += 1;
-
-        document.getElementById("Q").innerHTML = "第" + (nums-1) + "题：" + q.Q;
-        document.getElementById("A1").innerHTML = q.A1;
-        document.getElementById("A2").innerHTML = q.A2;
-        document.getElementById("A3").innerHTML = q.A3;
-        return;
     }
 
     //获取随机题号
@@ -50,7 +50,7 @@ function nextLevel() {
         finish();
         return;
     } else { //下一题
-        usedQuestions[nums - 4] = randNum;
+        usedQuestions[nums-1] = randNum;
         var q = questions[randNum];
 
         nums += 1;
@@ -85,11 +85,7 @@ function finish_one() {
     if (check == 0) {
         alert("请做出选择！");
         return;
-    } else if (nums < 5) { //必测题分数
-        if (questions_must[nums - 2].RA == checked) {
-            score += 10;
-        }
-    } else { //随机题分数
+    }else { //随机题分数
         if (questions[randNums].RA == checked) {
             score += 10;
         }
