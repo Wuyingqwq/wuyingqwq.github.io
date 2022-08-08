@@ -87,8 +87,9 @@ function finish_one() {
         return;
     }else { //随机题分数
         if (questions[randNums].RA == checked) {
-            score += 10;
+            score += 10;  
         }
+        document.getElementById("scoreGot").innerHTML = "得分：" + score;
     }
     nextLevel()
 }
