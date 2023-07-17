@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/litters.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+        <h1 style="color: red;">维吉尼亚密码</h1>
+        <h3 id="h3">明文/密文</h3>
+        <input type="text" value="" id="plainText">
+        <br>
+        <h3>密钥</h3>
+        <input type="text" value="" id="secretKey">
+        <br>
+        <br>
+        <input type="button" style="color: red;background-color: black;width: 100px;height: 50px;" id="pt" value="解密" onclick="start_get_pt()">
+        <br><br>
+        <input type="button" style="color: red;background-color: black;width: 100px;height: 50px;" id="ct" value="加密" onclick="start_get_ct()">
+        <h2 style="color:red ;" id="result"></h2>
+</body>
+
+</html>
