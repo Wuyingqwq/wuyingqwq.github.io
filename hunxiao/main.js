@@ -141,7 +141,6 @@ function jia() {
         //console.log(String(list[i]).toUpperCase())
         //console.log(replace_jia(String(list[i]).toUpperCase()))
         list[i] = replace_jia(String(list[i]).toUpperCase());
-        if (list[i] = "ERR"){return;}
         result += list[i];
     }
     console.log(result);
@@ -156,7 +155,6 @@ function jie() {
         //console.log(String(list[i]).toUpperCase())
         //console.log(replace_jia(String(list[i]).toUpperCase()))
         list[i] = replace_jie(String(list[i]).toUpperCase());
-        if (list[i] = "ERR"){return;}
         result += list[i]
     }
     console.log(result)
