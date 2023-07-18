@@ -198,9 +198,9 @@ function jia() {
         //console.log(String(list[i]).toUpperCase())
         //console.log(replace_jia(String(list[i]).toUpperCase()))
         if (list[i] == list[i].toLocaleUpperCase() && isNaN(Number(list[i]))) {
-            console.log(1)
+            //console.log(1)
             //console.log(replace_jia(String(list[i + 1]).toUpperCase()))
-            console.log(replace_jia(String(list[i])))
+            //console.log(replace_jia(String(list[i])))
             list[i] = "?" + replace_jia(String(list[i]));
             result += list[i];
             //i += 1;
@@ -209,7 +209,7 @@ function jia() {
                 list[i] = replace_jia(String(list[i]).toUpperCase()).toLowerCase();
                 result += list[i]
             } else {
-                console.log(replace_jia(list[i]))
+                //console.log(replace_jia(list[i]))
                 list[i] = replace_jia(list[i]);
                 result += list[i]
             }
@@ -218,7 +218,7 @@ function jia() {
         //list[i] = replace_jia(String(list[i]).toUpperCase());
         //result += list[i];
     }
-    console.log(result);
+    //console.log(result);
     document.getElementById("h2").innerHTML = result;
 }
 
@@ -235,12 +235,12 @@ function jie() {
             i += 1;
             //continue
         } else {
-            console.log(replace_jie(String(list[i])))
+            //console.log(replace_jie(String(list[i])))
             list[i] = replace_jie(String(list[i]).toUpperCase()).toLowerCase();
             result += list[i]
         }
 
     }
-    console.log(result)
+    //console.log(result)
     document.getElementById("h2").innerHTML = result;
 }
