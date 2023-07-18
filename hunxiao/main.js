@@ -98,6 +98,8 @@ function replace_jie(str) {
             return "?"
         case "|":
             return "@"
+        case "`":
+            return "="
     }
 }
 
@@ -187,6 +189,8 @@ function replace_jia(str) {
             return ">"
         case "@":
             return "|"
+        case "=":
+            return "`"
         default:
             return "ERR"
 
