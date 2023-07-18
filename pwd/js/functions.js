@@ -244,9 +244,40 @@ function get_ct(pt, sk) {
     var pt_split = pt.split(''); //分割
     var ct_value = ''
 
-    if (pt_length != sk_length) {
-        return undefined;
+    if (pt_length != sk_length && pt_length > sk_length) {
+        //return undefined;
+        var sk_arr = sk_litters.split("");
+        //console.log(Math.abs(pt_length - sk_length))
+        if (Math.ceil(Math.abs(pt_length - sk_length) / sk_length) > 1) { //如果密钥和待处理字母的差别次数大于1的话
+            //console.log(Math.ceil(Math.abs(pt_length - sk_length) / (sk_length + 1)))
+            //console.log(Math.abs(pt_length - sk_length))
+            for (let i = 0; i < Math.abs(pt_length - sk_length); i++) { // 循环相差的次数
+                if (Math.floor(i / (sk_length + 1)) >= 1) { //如果循环次数与密钥的字母个数的比大于或等于1
+                    if (i == sk_length) { // 如果刚好是第一次的最后一个
+                        sk_litters += sk_arr[i - 1]; // 直接加上
+                    } else {
+                        /*
+                        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                        console.log(i)
+                        console.log(Math.floor(Math.abs(i - (sk_length + 1)) / (sk_length + 1)))
+                        console.log(Math.floor(Math.abs(i - (sk_length + 1)) / (sk_length + 1)) * (sk_length + 1))
+                        console.log(sk_arr)*/
+                        sk_litters += sk_arr[i - Math.ceil(Math.abs(i - (sk_length + 1)) / (sk_length + 1)) * (sk_length + 1) - 1]; //取循环次数与密钥的差的比的向上取整数，再用循环次数减去
+                    }
+                } else {
+                    sk_litters += sk_arr[i];
+                }
+            }
+        } else {
+            for (let i = 0; i < Math.abs(pt_length - sk_length); i++) {
+                sk_litters += String(sk_arr[i]);
+                //console.log(1)
+            }
+        }
+
     }
+    sk_length = sk_litters.length - 1;
+    //console.log(sk_litters);
 
     //获取每个字母，并存入数组
     for (var i = 0; i <= pt_length; i++) {
@@ -285,14 +316,54 @@ function get_pt(ct, sk) {
     var ct_pt_split = ct.split('');
     var re_value = ''
 
-    if (ct_length != sk_length) {
-        return undefined;
+    //console.log(ct_litters)
+    //console.log(sk_litters.split(""))
+
+    if (ct_length != sk_length && ct_length > sk_length) {
+        //return undefined;
+        var sk_arr = sk_litters.split("");
+        //console.log(Math.abs(ct_length - sk_length))
+        if (Math.ceil(Math.abs(ct_length - sk_length) / sk_length) > 1) { //如果密钥和待处理字母的差别次数大于1的话
+            //console.log(Math.ceil(Math.abs(ct_length - sk_length) / (sk_length + 1)))
+            //console.log(Math.abs(ct_length - sk_length))
+            for (let i = 0; i < Math.abs(ct_length - sk_length); i++) { // 循环相差的次数
+                if (Math.floor(i / (sk_length + 1)) >= 1) { //如果循环次数与密钥的字母个数的比大于或等于1
+                    if (i == sk_length) { // 如果刚好是第一次的最后一个
+                        sk_litters += sk_arr[i - 1]; // 直接加上
+                    } else {
+                        /*
+                        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                        console.log(i)
+                        console.log(Math.floor(Math.abs(i - (sk_length + 1)) / (sk_length + 1)))
+                        console.log(Math.floor(Math.abs(i - (sk_length + 1)) / (sk_length + 1)) * (sk_length + 1))
+                        console.log(sk_arr)*/
+                        sk_litters += sk_arr[i - Math.ceil(Math.abs(i - (sk_length + 1)) / (sk_length + 1)) * (sk_length + 1) - 1]; //取循环次数与密钥的差的比的向上取整数，再用循环次数减去
+                    }
+                } else {
+                    sk_litters += sk_arr[i];
+                }
+            }
+        } else {
+            for (let i = 0; i < Math.abs(ct_length - sk_length); i++) {
+                sk_litters += String(sk_arr[i]);
+                //console.log(1)
+            }
+        }
+
     }
+    sk_length = sk_litters.length - 1;
 
     //将密文转换为明文
-    for (var i = 0; i <= sk_length; i++) {
+    for (var i = 0; i <= ct_length; i++) {
+        /*
+        console.log(sk_litters[i])
+        console.log(num_sk(sk_litters[i]))
+        console.log(ct_litters[i])
+        */
         ct_arr.push(num_sk(sk_litters[i]).indexOf(ct_litters[i].toUpperCase())) //.toUpperCase()是将字母转换为大写字母
     }
+
+    //console.log(ct_arr)
 
     //蒋明文字母存入数组中
     for (var ii = 0; ii <= ct_arr.length; ii++) {
@@ -307,13 +378,14 @@ function get_pt(ct, sk) {
     }
 
     //将数组拼接成字符串
-    for(var iiii = 0;iiii<=re_arr.length;iiii++){
-        if(re_arr[iiii] == undefined){
+    for (var iiii = 0; iiii <= re_arr.length; iiii++) {
+        if (re_arr[iiii] == undefined) {
 
-        }else{
+        } else {
             re_value += re_arr[iiii];
         }
     }
 
     return re_value;
+
 }
