@@ -96,6 +96,8 @@ function replace_jie(str) {
             return "."
         case ">":
             return "?"
+        case "|":
+            return "@"
     }
 }
 
@@ -183,17 +185,19 @@ function replace_jia(str) {
             return "["
         case "?":
             return ">"
+        case "@":
+            return "|"
         default:
             return "ERR"
+
     }
 }
-
-var ul = [];
 
 function jia() {
     var str = document.getElementById("input").value;
     var list = str.split("")
     var result = '';
+    var isNum = 0;
     for (let i = 0; i < list.length; i++) {
         //console.log(String(list[i]).toUpperCase())
         //console.log(replace_jia(String(list[i]).toUpperCase()))
@@ -201,7 +205,7 @@ function jia() {
             //console.log(1)
             //console.log(replace_jia(String(list[i + 1]).toUpperCase()))
             //console.log(replace_jia(String(list[i])))
-            list[i] = "?" + replace_jia(String(list[i]));
+            list[i] = "?" + replace_jia(String(list[i])); //将大写字母前加上?做辨别
             result += list[i];
             //i += 1;
         } else {
@@ -210,6 +214,7 @@ function jia() {
                 result += list[i]
             } else {
                 //console.log(replace_jia(list[i]))
+                isNum = 1;
                 list[i] = replace_jia(list[i]);
                 result += list[i]
             }
@@ -219,6 +224,7 @@ function jia() {
         //result += list[i];
     }
     //console.log(result);
+    //  
     document.getElementById("h2").innerHTML = result;
 }
 
