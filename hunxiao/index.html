@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,27 @@
     <script src="https://cdn.staticfile.org/pako/1.0.10/pako.min.js"></script>
     <script src="./main.js"></script>
 </head>
+
 <body>
     <input type="text" id="input" value="">
-    <button type="button" onclick="get_encode(document.getElementById('input').value,document.getElementById('h2'))">加密</button>
+    <button type="button"
+        onclick="get_encode(document.getElementById('input').value,document.getElementById('h2'))">加密</button>
     <button onclick="get_decode(document.getElementById('input').value,document.getElementById('h2'))">解密</button>
-    <a href="./about.html" target="_blank" rel="noopener noreferrer"><button>关于/更新日志</button></a>
+    <button onclick="copy()">复制</button>
     <br>
-    <textarea name="" id="h2" cols="56" rows="12" readonly></textarea>
+    <textarea name="" id="h2" cols="56" rows="12" readonly></textarea><br>
+    <a href="./about.html" target="_blank" rel="noopener noreferrer"><button>关于/更新日志</button></a>
+
+    <script>
+        function copy() {
+            let text = document.getElementById("h2");
+            text.select()
+            text.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(text.value)
+            text.setSelectionRange(0, 0);
+        }
+    </script>
 </body>
+
 </html>
