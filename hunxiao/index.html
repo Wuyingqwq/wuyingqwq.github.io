@@ -16,6 +16,29 @@
         onclick="get_encode(document.getElementById('input').value,document.getElementById('h2'))">加密</button>
     <button onclick="get_decode(document.getElementById('input').value,document.getElementById('h2'))">解密</button>
     <button onclick="copy()">复制</button>
+	<h3>加密程度：</h3>
+	<select class="sel">
+	    <option value="25">25</option>
+	    <option value="50">50</option>
+	    <option value="500">500</option>
+	    <option value="1000">1000</option>
+		<option value="1500">1500</option>
+		<option value="2000">2000</option>
+		<option value="3000">3000</option>
+		<option value="5000">5000</option>
+		<option value="7500">7500</option>
+		<option value="8500">8500</option>
+		<option value="8964">8964</option>
+		<option value="10000">10000</option>
+	</select><br>
+	<h2>是否在长度过长是进行加密？</h2><br>
+	<div>
+		是
+		<input type="radio" name="zip" id="yes" >
+	</div>
+	<div>
+		否<input type="radio" name="zip" id="no" >
+	</div>
     <br>
     <textarea name="" id="h2" cols="56" rows="12" readonly></textarea><br>
     <a href="./about.html" target="_blank" rel="noopener noreferrer"><button>关于/更新日志</button></a>
